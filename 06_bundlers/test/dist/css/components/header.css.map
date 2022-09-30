@@ -1,0 +1,1 @@
+{"version":3,"sources":["components/header.scss","components/header.css"],"names":[],"mappings":"AAAA;EACE,sBAAA;ACCF","file":"components/header.css","sourcesContent":["body {\n  background-color: blue;\n}\n\n","body {\n  background-color: blue;\n}"]}
