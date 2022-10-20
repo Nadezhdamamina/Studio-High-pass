@@ -1,0 +1,233 @@
+.header {
+   color: $lightColor;
+  // .header__top
+  &__top {
+    background-color: $blackColor;
+    padding: 25px 0 24px 0;
+    @media (max-width: 1240px) {
+      padding: 26px 0 27px 0;
+    }
+    @media (max-width: 610px) {
+      padding: 25px 0 26px 0;
+    }
+  }
+
+  &__bottom {
+    display: none;
+    padding: 12px 0;
+    background-color: $greyDarkColor;
+    @media (max-width: 980px) {
+      display: block;
+    }
+    @media (max-width: 610px) {
+    }
+  }
+
+  // .header__container
+  &__container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  // .header__logo
+  &__logo {
+    max-width: 100%;
+    display: block;
+    @media (max-width: 1240px) {
+      width: 166px;
+    }
+    @media (max-width: 610px) {
+      width: 111px;
+    }
+  }
+
+  &__burger {
+    display: none;
+    @media (max-width: 610px) {
+      display: block;
+      z-index: 5;
+    }
+  }
+
+  // .header__nav
+  &__nav {
+    margin-right: 54px;
+    @media (max-width: 980px) {
+      margin-right: 0;
+      animation-name: menu-close;
+    }
+    @media (max-width: 610px) {
+      display: none;
+
+    }
+    &.menu--active {
+      position: fixed;
+      top: 80px;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      padding: 48px 18px 36px;
+      display: flex;
+      flex-wrap: nowrap;
+      animation-name: menu-open;
+      animation-duration: .5s;
+      background-color: $blackColor;
+      z-index: 1;
+    }
+  }
+
+  // .header__list
+  &__list {
+    display: flex;
+    font-family: $fontNeue;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    @media (max-width: 980px) {
+      justify-content: space-between;
+    }
+    @media (max-width: 610px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+
+
+
+    }
+  }
+
+  // .header__item
+  &__item {
+    &:not(:last-child) {
+      margin-right: 79px;
+      @media (max-width: 1240px) {
+        margin-right: 33px;
+      }
+      @media (max-width: 980px) {
+        margin-right: 10px;
+      }
+      @media (max-width: 610px) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  // .header__link
+  &__link {
+    position: relative;
+    white-space: nowrap;
+    color: $lightColor;
+    z-index: 1;
+    &::before {
+      transform: scaleX(0);
+      transform-origin: bottom right;
+    }
+
+    &:focus {
+      color: $orangeColor;
+      outline: none;
+    }
+
+    &:hover:not(:active)::before {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+      outline: none;
+    }
+
+    &::before {
+      content: " ";
+      display: block;
+      position: absolute;
+      top: 0;
+      right: -5px;
+      bottom: 0;
+      left: -5px;
+      //inset: 0 0 0 0;
+      background-color: $terracottaColor;
+      z-index: -1;
+      transition: transform .3s ease;
+    }
+
+    &:active {
+      color: $darkOrangeColor;
+    }
+  }
+
+  &__search {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+  }
+
+  &__search-input {
+    position: absolute;
+    right: 29px;
+    z-index: 15;
+    color: $greyLightColor;
+    background-color: $blackColor;
+    border-bottom: 1px solid $greyLightColor;
+    &:hover:not(:active),
+    &:focus {
+      border-color: $orangeColor;
+    }
+    &:active {
+      border-color: $darkOrangeColor;
+    }
+    &:active::placeholder {
+      display: none;
+      opacity: 0;
+    }
+  }
+
+  // .header__search-btn
+  &__search-btn {
+    width: 25px;
+    height: 25px;
+    padding: 0;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: inherit;
+    svg {
+      width: 100%;
+    }
+    @media (max-width: 610px) {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &__search.is-opened {
+    display: flex;
+    justify-content: flex-end;
+    animation-name: search-open;
+    animation-duration: $transitionTime;
+  }
+
+  &__search.is-closed {
+    animation-name: search-close;
+    animation-duration: $transitionTime;
+  }
+
+  // .header__search-btn--open
+  &__search-btn--open,
+  &__search-btn--close {
+    display: block;
+  }
+
+  &__search-btn--open {
+    transition: opacity .2 ease;
+  }
+}
+
+.search {
+  fill: $lightColor;
+}
+
+//Burger
+.burger { @include burger }
