@@ -171,7 +171,9 @@ a {
 
 .btn {
   display: inline-block;
-  // position: relative;
+  // max-width: 100%;
+  // display: flex;
+  //position: relative;
   padding: 16px 22px;
   background-color: $orangeColor;
   font-family: $fontFamily;
@@ -185,7 +187,6 @@ a {
     padding: 12px 22px;
     font-size: 14px;
     line-height: 16px;
-
   }
   &:focus {
     background-color: $terracottaColor;
@@ -206,6 +207,11 @@ a {
   font-size: 16px;
   border: none;
   outline: none;
+  @media (max-width: 610px) {
+    padding: 12px 22px;
+    font-size: 14px;
+    line-height: 16px;
+  }
   &:focus::placeholder {
     color: $orangeColor;
   }

@@ -7,7 +7,7 @@
       padding: 24px 0 24px 0;
     }
     @media (max-width: 610px) {
-      padding: 33px 0 26px 0;
+      padding: 33px 0 27px 0;
     }
   }
 
@@ -15,7 +15,7 @@
   &__logo {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    //justify-content: center;
     grid-column: 1/ span 3;
     @media (max-width: 1240px) {
       grid-column: 1/ span 3;
@@ -76,6 +76,9 @@
     z-index: 1;
     p {
       margin-bottom: 11px;
+      @media (max-width: 610px) {
+        margin-bottom: 9px;
+      }
     }
     @media (max-width: 1240px) {
       grid-column: -3/ span 2;
@@ -108,15 +111,30 @@
 
   // .footer__link
   &__link {
+    outline: none;
     & .icon {
       width: 30px;
       height: 30px;
       fill: $greyColor;
+
+      &:focus {
+        fill: $orangeColor;
+      }
+      &:hover {
+        fill: $terracottaColor;
+      }
+      &:active {
+        fill: $darkOrangeColor;
+      }
     }
   }
 
   &__bottom {
+    display: none;
     padding: 14px 0;
     background-color: $greyDarkColor;
+    @media (max-width: 610px) {
+      display: block;
+    }
   }
 }

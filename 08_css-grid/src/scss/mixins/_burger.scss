@@ -30,6 +30,7 @@
   }
 
   &::after {
+    width: 10px;
     top: calc(100% - var(--burger-line-height));
   }
 
@@ -45,14 +46,25 @@
   }
 
   &--active {
+    width: 18px;
+    height: 18px;
+    top: 11px;
+    border-radius: 50%;
+    background-color: #808080;
     &::before {
+      width: 10px;
+      height: 1px;
       top: 50%;
+      left: 22%;
       transform: rotate(45deg);
       transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
     }
 
     &::after {
+      width: 10px;
+      height: 1px;
       top: 50%;
+      left: 22%;
       transform: rotate(-45deg);
       transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
     }
