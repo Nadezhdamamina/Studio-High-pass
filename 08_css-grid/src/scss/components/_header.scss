@@ -55,16 +55,18 @@
   // .header__nav
   &__nav {
     margin-right: 54px;
+    animation-name: menu-close;
+    animation-duration: $transitionTime;
     @media (max-width: 980px) {
       margin-right: 0;
-      animation-name: menu-close;
+
     }
     @media (max-width: 610px) {
       display: none;
     }
     &.menu--active {
       position: fixed;
-      top: 80px;
+      top: 70px;
       left: 0;
       width: 100%;
       height: 100vh;
@@ -72,13 +74,13 @@
       display: flex;
       flex-wrap: nowrap;
       animation-name: menu-open;
-      animation-duration: .5s;
+      animation-duration: $transitionTime;
       background-color: $blackColor;
       z-index: 1;
     }
     &.menu--active {
       @media (max-width: 610px) {
-        top: 70px;
+
       }
     }
   }
@@ -98,9 +100,6 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-
-
-
     }
   }
 

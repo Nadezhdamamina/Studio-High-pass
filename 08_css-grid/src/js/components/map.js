@@ -18,4 +18,19 @@
 
           // Размещение геообъекта на карте.
           myMap.geoObjects.add(myPlacemark);
+
+          myPlacemark.events.add('click', function () {
+            const adress = document.querySelector(".contacts-block__adress");
+            const btnClose = document.querySelector(".contacts-block__btn-close");
+
+            adress.classList.toggle("block-open");
+
+           if (adress.classList.contains("contacts-block__adress")) {
+            btnClose.addEventListener("click", function () {
+            adress.classList.remove("block-open");
+            })
+           }
+        });
       }
+
+

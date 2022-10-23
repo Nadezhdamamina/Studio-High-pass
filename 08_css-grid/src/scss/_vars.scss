@@ -44,6 +44,26 @@
     }
   }
 
+  @keyframes block-open {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: .85;
+    }
+  }
+
+  @keyframes block-close {
+    from {
+      opacity: .85;
+    }
+
+    to {
+      opacity: 0;
+    }
+  }
+
   @keyframes menu-open {
     from {
       transform: translateX(-100%);

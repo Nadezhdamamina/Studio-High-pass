@@ -276,6 +276,15 @@
   flex-direction: column;
   justify-content: space-between;
   outline: none;
+  &:focus:not(:hover):not(:active) .card__body .card__descr {
+    color: $orangeColor;
+  }
+  &:hover:not(:focus):not(:active) .card__body .card__descr {
+    background-color: $beigeColor;
+  }
+  &:active .card__body .card__descr {
+    color: $darkOrangeColor;
+  }
 
   &__img {
     width: 100%;
@@ -607,6 +616,9 @@
   width: 20px;
   height: 20px;
   fill: $greyColor;
+  use rect {
+    fill: white;
+  }
 }
 
 .contacts {
@@ -657,7 +669,7 @@
   // .contacts-block__adress
   &__adress {
     position: relative;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     padding: 82px 60px 60px;
@@ -665,6 +677,13 @@
     grid-row: 1/ span 1;
     background-color: $blackColor;
     opacity: .85;
+    animation-name: block-close;
+    animation-duration: $transitionTime;
+    &.block-open {
+      display: flex;
+      animation-name: block-open;
+      animation-duration: $transitionTime;
+    }
     @media (max-width: 1240px) {
       padding: 22px 180px 14px 30px;
       justify-content: flex-start;

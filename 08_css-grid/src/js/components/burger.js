@@ -17,11 +17,12 @@ export function menuInit() {
 }
 export function menuOpen() {
 	bodyLock();
-	document.documentElement.classList.add("menu-open");
+	document.documentElement.classList.add("menu--open");
 }
 export function menuClose() {
 	bodyUnlock();
 	document.documentElement.classList.remove("menu-open");
+  //document.documentElement.classList.add("menu-close")
 }
 
 export let bodyLockStatus = true;
