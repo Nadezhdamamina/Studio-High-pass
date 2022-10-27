@@ -35,6 +35,8 @@ export const validateForms = (selector, rules, afterSend) => {
 
   const validation = new JustValidate(selector);
 
+
+
   for (let item of rules) {
     validation
       .addField(item.ruleSelector, item.rules);

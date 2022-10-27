@@ -76,11 +76,104 @@ import { burger } from './functions/burger';
 //   console.log(e.detail.dir);
 // });
 
-// import { validateForms } from './functions/validate-forms';
-// const rules1 = [...];
+import { validateForms } from './functions/validate-forms';
+const rules1 = [
+  {
+    errorLabelCssClass: 'just-validate-error-label',
+    errorLabelStyle: {
+      color: 'blue',
+    },
+    ruleSelector: '.form-name',
+    rules: [
+      {
+        rule: 'minLength',
+        value: 2,
+        errorMessage: 'Введите 2 и более символов',
 
-// const afterForm = () => {
-//   console.log('Произошла отправка, тут можно писать любые действия');
-// };
+      },
+      {
+        rule: 'maxLength',
+        value: 30,
+        errorMessage: 'Введите не более 30 символов',
+      },
+      {
+        rule: 'customRegexp',
+        value: /[А-Яа-яЁё]/,
 
-// validateForms('.form-1', rules1, afterForm);
+        errorMessage: 'Недопустимый формат',
+        errorMessageColor: "blue",
+      },
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Заполните имя!'
+      }
+
+    ]
+  },
+  {
+    ruleSelector: '.form-email',
+    rules: [
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Заполните email!'
+      },
+      {
+        rule: 'minLength',
+        value: 3,
+        errorMessage: 'Введите 2 и более символов',
+      },
+      {
+        rule: 'maxLength',
+        value: 30,
+        errorMessage: 'Введите не более 30 символов',
+      },
+      {
+        rule: 'customRegexp',
+        value: /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/,
+        errorMessage: 'Недопустимый формат',
+      }
+    ]
+  },
+];
+
+const rules2 = [
+  {
+    // errorLabelCssClass: 'just-validate-error-label',
+    // errorLabelStyle: {
+    //   color: 'blue',
+    // },
+
+    ruleSelector: '.about-form__input',
+    rules: [
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Заполните email!'
+      },
+      {
+        rule: 'minLength',
+        value: 3,
+        errorMessage: 'Введите 2 и более символов',
+      },
+      {
+        rule: 'maxLength',
+        value: 30,
+        errorMessage: 'Введите не более 30 символов',
+      },
+      {
+        rule: 'customRegexp',
+        value: /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/,
+        errorMessage: 'Недопустимый формат',
+      }
+    ]
+  },
+];
+
+const afterForm = () => {
+   console.log('Произошла отправка, тут можно писать любые действия');
+};
+
+validateForms('.contacts-block__form', rules1, afterForm);
+validateForms('.about-form', rules2, afterForm);
