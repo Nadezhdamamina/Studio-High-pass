@@ -70,12 +70,14 @@
     }
 
     to {
+      //visibility: visible;
       transform: translateX(0);
     }
   }
 
   @keyframes menu-close {
     from {
+      //visibility: visible;
       transform: translateX(0);
     }
 

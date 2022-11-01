@@ -53,5 +53,12 @@
       activeClass: "is-opened", // класс открытого состояния
       hiddenClass: "is-closed" // класс закрывающегося состояния (удаляется сразу после закрытия)
   });
+//   setSearch({
+//     openBtnClass: "js-open-burger", // класс кнопки открытия
+//     closeBtnClass: "js-close-burger", // класс кнопки закрытия
+//     searchClass: "js-burger-form", // класс формы поиска
+//     activeClass: "is-open-menu", // класс открытого состояния
+//     hiddenClass: "is-close-menu" // класс закрывающегося состояния (удаляется сразу после закрытия)
+// });
 
 })();

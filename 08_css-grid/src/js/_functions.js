@@ -79,10 +79,11 @@ import { burger } from './functions/burger';
 import { validateForms } from './functions/validate-forms';
 const rules1 = [
   {
-    errorLabelCssClass: 'just-validate-error-label',
+    //errorLabelCssClass: 'just-validate-error-label',
     errorLabelStyle: {
       color: 'blue',
     },
+
     ruleSelector: '.form-name',
     rules: [
       {
@@ -99,9 +100,7 @@ const rules1 = [
       {
         rule: 'customRegexp',
         value: /[А-Яа-яЁё]/,
-
         errorMessage: 'Недопустимый формат',
-        errorMessageColor: "blue",
       },
       {
         rule: 'required',
@@ -172,7 +171,7 @@ const rules2 = [
 ];
 
 const afterForm = () => {
-   console.log('Произошла отправка, тут можно писать любые действия');
+   console.log('Произошла отправка');
 };
 
 validateForms('.contacts-block__form', rules1, afterForm);
