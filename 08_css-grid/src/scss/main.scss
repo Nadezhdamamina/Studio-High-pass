@@ -608,9 +608,8 @@
   width: 20px;
   height: 20px;
   fill: $greyColor;
-  use rect {
-    fill: white;
-  }
+  stroke: white;
+
 }
 
 .contacts {
@@ -676,19 +675,26 @@
       opacity: .85;
     }
     @media (max-width: 1240px) {
+      //display: inline-block;
       padding: 22px 180px 14px 30px;
       justify-content: flex-start;
     }
     @media (max-width: 610px) {
-      padding: 26px 20px 14px 20px;
+      padding: 26px 30px 14px 20px;
     }
     & .descr-larg {
+      //display: inline-block;
       margin-bottom: 4px;
+      @media (max-width: 610px) {
+        margin-bottom: 11px;
+      }
     }
     & .descr {
+      display: inline-block;
       margin-bottom: 2px;
       line-height: 28px;
       @media (max-width: 610px) {
+        margin-bottom: 12px;
         font-size: 14px;
         line-height: 18px;
       }

@@ -79,11 +79,15 @@ import { burger } from './functions/burger';
 import { validateForms } from './functions/validate-forms';
 const rules1 = [
   {
-    //errorLabelCssClass: 'just-validate-error-label',
-    errorLabelStyle: {
-      color: 'blue',
+    errorFieldCssClass: 'is-invalid',
+    errorFieldStyle: {
+      border: '1px solid red',
     },
-
+    errorLabelCssClass: 'is-label-invalid',
+    errorLabelStyle: {
+      color: 'red',
+      textDecoration: 'underlined',
+    },
     ruleSelector: '.form-name',
     rules: [
       {
@@ -100,7 +104,9 @@ const rules1 = [
       {
         rule: 'customRegexp',
         value: /[А-Яа-яЁё]/,
+
         errorMessage: 'Недопустимый формат',
+
       },
       {
         rule: 'required',
