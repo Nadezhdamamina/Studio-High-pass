@@ -79,11 +79,11 @@ import { burger } from './functions/burger';
 import { validateForms } from './functions/validate-forms';
 const rules1 = [
   {
-    errorFieldCssClass: 'is-invalid',
+    errorFieldCssClass: 'just-validate-error-field',
     errorFieldStyle: {
       border: '1px solid red',
     },
-    errorLabelCssClass: 'is-label-invalid',
+    errorLabelCssClass: 'just-validate-error-label',
     errorLabelStyle: {
       color: 'red',
       textDecoration: 'underlined',
@@ -94,7 +94,6 @@ const rules1 = [
         rule: 'minLength',
         value: 2,
         errorMessage: 'Введите 2 и более символов',
-
       },
       {
         rule: 'maxLength',
@@ -104,7 +103,6 @@ const rules1 = [
       {
         rule: 'customRegexp',
         value: /[А-Яа-яЁё]/,
-
         errorMessage: 'Недопустимый формат',
 
       },

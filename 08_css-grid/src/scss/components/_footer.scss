@@ -4,7 +4,7 @@
   &__container {
     padding: 26px 0 24px 0;
     @media (max-width: 1240px) {
-      padding: 24px 0 24px 0;
+      padding: 23px 0 17px 0;
     }
     @media (max-width: 610px) {
       padding: 33px 0 27px 0;
@@ -15,10 +15,11 @@
   &__logo {
     display: flex;
     flex-direction: column;
-    //justify-content: center;
+    //
     grid-column: 1/ span 3;
     @media (max-width: 1240px) {
       grid-column: 1/ span 3;
+      justify-content: center;
     }
     @media (max-width: 980px) {
 
