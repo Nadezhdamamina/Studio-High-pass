@@ -258,10 +258,11 @@ a {
 
 .block-call {
   display: flex;
-    font-family: $fontNeue;
-    font-size: 16px;
-    line-height: 21px;
-    color: $orangeColor;
+  align-items: center;
+  font-family: $fontNeue;
+  font-size: 16px;
+  line-height: 21px;
+  color: $orangeColor;
     @media (max-width: 610px) {
       font-weight: 500;
       font-size: 14px;
@@ -273,7 +274,7 @@ a {
   position: absolute;
   top: 2px;
   left: 23px;
-  color: $orangeColor;
+  color: $orangeColor !important;
   font-size: 9px;
   line-height: 11px;
 }

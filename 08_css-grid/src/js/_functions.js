@@ -79,16 +79,8 @@ import { burger } from './functions/burger';
 import { validateForms } from './functions/validate-forms';
 const rules1 = [
   {
-    errorFieldCssClass: 'just-validate-error-field',
-    errorFieldStyle: {
-      border: '1px solid red',
-    },
-    errorLabelCssClass: 'just-validate-error-label',
-    errorLabelStyle: {
-      color: 'red',
-      textDecoration: 'underlined',
-    },
     ruleSelector: '.form-name',
+    colorWrong: '#FF6E30',
     rules: [
       {
         rule: 'minLength',
@@ -143,17 +135,13 @@ const rules1 = [
 
 const rules2 = [
   {
-    // errorLabelCssClass: 'just-validate-error-label',
-    // errorLabelStyle: {
-    //   color: 'blue',
-    // },
-
+    colorWrong: '#FF6E30',
     ruleSelector: '.about-form__input',
     rules: [
       {
         rule: 'required',
         value: true,
-        errorMessage: 'Заполните email!'
+        errorMessage: 'Заполните email!',
       },
       {
         rule: 'minLength',
