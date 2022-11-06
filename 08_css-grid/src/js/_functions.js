@@ -80,7 +80,6 @@ import { validateForms } from './functions/validate-forms';
 const rules1 = [
   {
     ruleSelector: '.form-name',
-    colorWrong: '#FF6E30',
     rules: [
       {
         rule: 'minLength',
@@ -135,6 +134,7 @@ const rules1 = [
 
 const rules2 = [
   {
+
     colorWrong: '#FF6E30',
     ruleSelector: '.about-form__input',
     rules: [

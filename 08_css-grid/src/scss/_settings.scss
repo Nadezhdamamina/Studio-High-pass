@@ -122,7 +122,6 @@ a {
   position: relative;
 }
 
-
 .grid {
   display: grid;
   grid-template-columns: repeat(12, minmax(50px, 1fr));
@@ -144,7 +143,6 @@ a {
   font-weight: normal;
   font-size: 48px;
   line-height: 65px;
-  //color: $textColor;
 }
 
 .sub-title {
@@ -163,7 +161,6 @@ a {
   font-family: $fontFamily;
   font-weight: 400;
   font-size: 16px;
-  //line-height: 19px;
   @media (max-width: 610px) {
     font-size: 14px;
   }
@@ -171,16 +168,12 @@ a {
 
 .btn {
   display: inline-block;
-  // max-width: 100%;
-  // display: flex;
-  //position: relative;
   padding: 16px 22px;
   background-color: $orangeColor;
   font-family: $fontFamily;
   font-weight: 700;
   font-size: 16px;
   color: $lightColor;
-  //box-sizing: border-box;
   outline: none;
   border: none;
   @media (max-width: 610px) {
@@ -221,9 +214,9 @@ a {
   &:active {
     background-color: $darkOrangeColor;
   }
-  &:invalid {
-    box-shadow: inset 0 0 0 1px $pinkColor;
-  }
+  // &:invalid {
+  //   box-shadow: inset 0 0 0 1px $pinkColor;
+  // }
 }
 
 .descr-foto {
@@ -274,29 +267,7 @@ a {
   position: absolute;
   top: 2px;
   left: 23px;
-  color: $orangeColor !important;
+  color: $orangeColor;
   font-size: 9px;
   line-height: 11px;
 }
-
-
-// .btn--border {
-//   border: 2px solid var(--violet_middle-color);
-// }
-
-// .btn::after {
-//   content: "";
-//   position: absolute;
-//   top: -5px;
-//   right: -5px;
-//   bottom: -5px;
-//   left: -5px;
-//   border: 2px solid var(--violet_light-color);
-//   border-radius: inherit;
-//   opacity: 0;
-//   transition: opacity var(--transition-time) ease;
-// }
-
-// .btn:focus {
-//   outline: none;
-// }

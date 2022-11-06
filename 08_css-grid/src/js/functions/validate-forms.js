@@ -33,7 +33,17 @@ export const validateForms = (selector, rules, afterSend) => {
     }
   }
 
-  const validation = new JustValidate(selector);
+  const validation = new JustValidate(selector,
+    {
+    //errorFieldCssClass: 'is-invalid',
+    errorFieldStyle: {
+      border: '1px solid #FF6E30',
+    },
+    //errorLabelCssClass: 'is-label-invalid',
+    errorLabelStyle: {
+      color: '#FF6E30',
+    },
+  });
 
   for (let item of rules) {
     validation

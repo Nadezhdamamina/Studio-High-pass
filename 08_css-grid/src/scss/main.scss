@@ -147,13 +147,7 @@
     }
   }
 
-  // .works-block__foto
-
-  &__foto {
-  }
-
   // .works-block__foto1
-
   &__foto1 {
     grid-column: 1/ span 6;
     grid-row: 1/ span 1;
@@ -165,14 +159,12 @@
   }
 
   // .works-block__foto2
-
   &__foto2 {
     grid-column: 1/ span 3;
     grid-row: 2/ span 1;
   }
 
   // .works-block__foto3
-
   &__foto3 {
     grid-column: 4/ span 3;
     grid-row: 2/ span 1;
@@ -271,12 +263,9 @@
   &__input {
     display: block;
     width: 100%;
-    //max-width: 474px;
-
   }
 
   // .about-form__btn
-
   &__btn {
     width: 100%;
     max-width: 126px;
@@ -636,8 +625,6 @@
   display: none;
 }
 
-.map-content {
-}
 
 .call {
   width: 22px;
@@ -650,17 +637,9 @@
 }
 
 .close {
-  // position: absolute;
-  // top: 30%;
   width: 10px;
   height: 10px;
   fill:white;
-  //fill: $greyColor;
-  //stroke: white;
-  //stroke-width: 1;
-  // &#path {
-  //   stroke: white;
-  // }
 }
 
 .contacts {
@@ -776,7 +755,6 @@
   }
 
   &__call {
-    //display: flex;
     margin-left: 6px;
     color: $orangeColor;
     @media (max-width: 1240px) {
@@ -792,7 +770,6 @@
       display: flex;
       span {
         margin-left: 2px;
-        //vertical-align: 4px;
       }
     }
   }
