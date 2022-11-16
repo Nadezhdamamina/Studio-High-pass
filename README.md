@@ -16,8 +16,8 @@
 :woman_technologist: About Me :
 I am a beginner :seedling: Frontend Developer from Russia Kaliningrad.
 
-<p>Projects: 
-&#127807; https://nadezhdamamina.github.io/Studio-High-pass/
-&#127807; https://nadezhdamamina.github.io/Blanchard/</p>
+<p>Projects:</p>
+<p>&#127807; https://nadezhdamamina.github.io/Studio-High-pass/</p>
+<p>&#127807; https://nadezhdamamina.github.io/Blanchard/</p>
 
                          
