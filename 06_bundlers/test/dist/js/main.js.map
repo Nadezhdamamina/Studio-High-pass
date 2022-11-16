@@ -1,1 +1,0 @@
-{"version":3,"file":"main.js","mappings":";;;;;AAAA,MAAMA,GAAG,GAAG,EAAZ;AACA,MAAMC,IAAI,GAAGD,GAAH,aAAGA,GAAH,uBAAGA,GAAG,CAAEC,IAAlB,C","sources":["webpack://gulp-builder/./src/js/main.js"],"sourcesContent":["const obj = {};\nconst prop = obj?.prop;\n"],"names":["obj","prop"],"sourceRoot":""}
