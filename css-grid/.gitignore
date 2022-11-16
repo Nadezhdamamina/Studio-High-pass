@@ -1,4 +1,10 @@
 /node_modules
-/app
+/src
 package-lock.json
-README.md
+package.json
+gulpfile.js
+.editorconfig
+.ecrc
+.stylelintrc.json
+.htmlhintrc
+.gitignore
